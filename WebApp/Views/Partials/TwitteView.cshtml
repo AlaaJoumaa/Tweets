@@ -1,0 +1,22 @@
+﻿<div class="row">
+    <div class="col-md-2 col-sm-3 col-xs-3 col-lg-2 item-center">
+        <div class="border-3">
+            <img src="{{twitte.User.ProfileImageUrl}}" alt="{{twitte.User.ScreenName}}" class="profile-img border-10" />
+        </div>
+    </div>
+
+    <div ng-bind-html="twitte.Text" class="col-md-10 col-sm-9 col-xs-9 col-lg-10 twitte-text">
+        {{twitte.Text}}
+    </div>
+
+    <div class="col-md-2 col-sm-3 col-xs-3 col-lg-2">
+        
+    </div>
+
+    <div class="col-md-10 col-sm-9 col-xs-9 col-lg-10 date-text">
+        {{twitte.CreatedAt}}
+    </div>
+
+    <hr class="twitte-hr" />
+
+</div>

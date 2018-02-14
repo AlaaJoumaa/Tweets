@@ -1,0 +1,54 @@
+﻿@{
+  ViewBag.Title = "Tweets";
+}
+
+<div ng-controller="index">
+
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+        <h1 id="logoText">
+            Tweets
+        </h1>
+    </div>
+
+    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 padding-remove">
+        <div class="form-group">
+            <input type="text" enter-click="onSearchChange()" class="form-control search" ng-model="searchText" placeholder="Search..." />
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 padding-remove">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 float" ng-show="progressDisplay">
+                            <div class="outerCircle"></div>
+                            <div class="innerCircle"></div>
+                            <div class="icon"></div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                            <div ng-repeat="twitte in data">
+                                @Html.Partial("~/Views/Partials/TwitteView.cshtml")
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                        <div id="loadTweets" ng-click="loadMore()" class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                            <div>{{loadMessage}}</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
